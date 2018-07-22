@@ -110,7 +110,9 @@ public:
 
         //MineGenesis(genesis);
 
-        vSeeds.push_back(CDNSSeedData("45.63.7.226", "45.63.7.226")); // AWS cloud node
+        vSeeds.push_back(CDNSSeedData("45.63.7.226", "45.63.7.226")); // Vultr cloud node 1
+        vSeeds.push_back(CDNSSeedData("104.156.238.199", "104.156.238.199")); // Vultr cloud node 2
+        vSeeds.push_back(CDNSSeedData("45.76.126.193", "45.76.126.193")); // Vultr cloud node 3
 		
 		
 		
@@ -170,7 +172,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("45.63.7.226", "45.63.7.226"));
+        vSeeds.push_back(CDNSSeedData("45.63.7.226", "45.63.7.226")); // Vultr cloud node 1
+        vSeeds.push_back(CDNSSeedData("104.156.238.199", "104.156.238.199")); // Vultr cloud node 2
+        vSeeds.push_back(CDNSSeedData("45.76.126.193", "45.76.126.193")); // Vultr cloud node 3
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 132); // vapecoin test net start with v
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
