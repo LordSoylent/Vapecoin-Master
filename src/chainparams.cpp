@@ -71,11 +71,11 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xec;
-        pchMessageStart[1] = 0xfa;
-        pchMessageStart[2] = 0xa4;
-        pchMessageStart[3] = 0x7b;
-        vAlertPubKey = ParseHex("04c7a474927c8d95b36122760e1c4cd3d91656974f3f92e053ad1abea09503e3c96991f3853feea9700730791d1483a86157a3179802cdf52a7a46993c79c657b4");
+        pchMessageStart[0] = 0xed;
+        pchMessageStart[1] = 0xfb;
+        pchMessageStart[2] = 0xa5;
+        pchMessageStart[3] = 0x7c;
+        vAlertPubKey = ParseHex("04d9554786c6f8cb39c13608865f1d5fdfeee349ae168301037c993b054007d40105ab5f98970ed914a956e5fd7a0877f36110e55f82ffeb40e06ab6cca2f883d4");
         nDefaultPort = 8273;
         nRPCPort = 8272;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
@@ -95,18 +95,18 @@ public:
         std::vector<CTxOut> vout;
         vout.resize(1);
         vout[0].SetEmpty();
-        CTransaction txNew(1, 1532072245, vin, vout, 0);
+        CTransaction txNew(1, 1532298013, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1532072245;
+        genesis.nTime    = 1532298013;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 3458717;
+        genesis.nNonce   = 6073897;
 
         hashGenesisBlock = genesis.GetHash();
-          assert(hashGenesisBlock == uint256("0x00000a006c0540f86b093edcc287269fe1ddee9fd8c6eecf3e3898b6e8a33ab0"));
-          assert(genesis.hashMerkleRoot == uint256("0xb8ec43f90415ee341b5b0f0b68c2a5e52e23827c1fecf72e3d8bfe3f967ac0c9"));
+          assert(hashGenesisBlock == uint256("0x00000c810e99aca6446726bbba572ce43b1cb9cc3ad179804d9a45d4d5d57f84"));
+          assert(genesis.hashMerkleRoot == uint256("0xb25d62e296d0ac524eea21ffaa3b1d78fdc0429ad00a7fc052df74a457f0bd89"));
 
         //MineGenesis(genesis);
 
@@ -156,7 +156,7 @@ public:
         pchMessageStart[2] = 0x25;
         pchMessageStart[3] = 0x14;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-        vAlertPubKey = ParseHex("04341da8491c566f7d0fa4b72ee3c4a5ebb215f97b0dcc216e3843cf7c73f8bb20695fd4b83301dc1146462466533f43a0bd99f05a2e794996cbe753454e9363ee");
+        vAlertPubKey = ParseHex("040dcd06d0afee40040ae8ea67d4c56d0e25af8010f5fa46ab54a837ee470da99cb5588e282b21354353761125c7a799d6ca707377b15fbe65d5da0ff33c08e13f");
         nDefaultPort = 8271;
         nRPCPort = 8270;
 
