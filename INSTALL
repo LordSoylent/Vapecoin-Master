@@ -1,0 +1,9 @@
+Building VapeCoin
+
+See doc/readme-qt.rst for instructions on building VapeCoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of VapeCoin.
+
+See doc/build-*.txt for instructions on building vapecoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of VapeCoin.
