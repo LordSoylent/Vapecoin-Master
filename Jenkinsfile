@@ -6,7 +6,10 @@ pipeline {
         sh '''rm -rf /mnt/Vapecoin-Master
 cp -a $WORKSPACE /mnt/Vapecoin-Master
 cd /mnt
-cp compile-blk.sh Vapecoin-Master/compile-blk.sh 
+cp compile-vape.sh Vapecoin-Master/compile-vape.sh 
+cd Vapecoin-Master
+qmake
+make distclean 
 '''
       }
     }
@@ -25,6 +28,7 @@ cd ../../'''
             sh '''cd /mnt/Vapecoin-Master/
 export PATH=/mnt/mxe/usr/bin:$PATH
 cd src/leveldb
+chmod +x build_detect_platform
 TARGET_OS=NATIVE_WINDOWS make libleveldb.a libmemenv.a CC=/mnt/mxe/usr/bin/i686-w64-mingw32.static-gcc CXX=/mnt/mxe/usr/bin/i686-w64-mingw32.static-g++
 '''
           }
@@ -48,7 +52,7 @@ make -j3 -f makefile.unix'''
           steps {
             sh '''export PATH=/mnt/mxe/usr/bin:$PATH
 cd /mnt/Vapecoin-Master
-./compile-blk.sh'''
+./compile-vape.sh'''
           }
         }
       }
@@ -64,7 +68,7 @@ mkdir -p $JOB_NAME/$BUILD_NUMBER
       parallel {
         stage('Move Linux QT') {
           steps {
-            sh '''cp Vapecoin-Master /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/Vapecoin-qt
+            sh '''cp vapecoin-qt /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/Vapecoin-qt
 '''
           }
         }
@@ -75,7 +79,7 @@ mkdir -p $JOB_NAME/$BUILD_NUMBER
         }
         stage('Move Windows QT') {
           steps {
-            sh 'cp /mnt/Vapecoin-Master/release/Vapecoin.exe /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/Vapecoin-qt.exe'
+            sh 'cp /mnt/Vapecoin-Master/release/vapecoin-qt.exe /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/Vapecoin-qt.exe'
           }
         }
       }
