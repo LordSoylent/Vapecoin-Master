@@ -9,12 +9,12 @@ obj/rpcmining.o: rpcmining.cpp rpcserver.h uint256.h rpcprotocol.h \
  obj/skunkhash/raptor.h sync.h threadsafety.h txmempool.h net.h mruset.h \
  netbase.h protocol.h addrman.h timedata.h scrypt.h db.h txdb.h \
  txdb-leveldb.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/db.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/iterator.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/slice.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/status.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/options.h \
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/write_batch.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/db.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/iterator.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/slice.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/status.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/options.h \
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/write_batch.h \
  init.h wallet.h walletdb.h crypter.h ui_interface.h miner.h kernel.h
 rpcmining.cpp rpcserver.h uint256.h rpcprotocol.h :
  compat.h json/json_spirit_reader_template.h json/json_spirit_value.h :
@@ -27,10 +27,10 @@ rpcmining.cpp rpcserver.h uint256.h rpcprotocol.h :
  obj/skunkhash/raptor.h sync.h threadsafety.h txmempool.h net.h mruset.h :
  netbase.h protocol.h addrman.h timedata.h scrypt.h db.h txdb.h :
  txdb-leveldb.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/db.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/iterator.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/slice.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/status.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/options.h :
- /mnt/d/LinuxDrive/vapecoin-master/src/leveldb/include/leveldb/write_batch.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/db.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/iterator.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/slice.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/status.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/options.h :
+ /mnt/d/GitHub/Vapecoin-Master/src/leveldb/include/leveldb/write_batch.h :
  init.h wallet.h walletdb.h crypter.h ui_interface.h miner.h kernel.h :
